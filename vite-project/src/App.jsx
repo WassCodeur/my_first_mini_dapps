@@ -20,7 +20,7 @@ const App = () => {
         const provider = new ethers.BrowserProvider(window.ethereum);
         const contract = new ethers.Contract(contractAddress, abi, provider);
         const balance = await contract.getBalance();
-        setBalance(ethers.utils.formatEther(balance)); // Affiche le solde en ETH
+        setBalance(ethers.utils.formatEther(balance));
       } catch (err) {
         console.error("Error fetching balance:", err);
       }
